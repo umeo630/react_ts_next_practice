@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import './App.css'
 import ContainerSample from './components/ContainerSample'
 import Page from './components/ContextSample'
-import Counter from './components/StateSample'
+import Counter from './components/ReducerSample'
 
 function App() {
   const [count, setCount] = useState(0)
