@@ -1,27 +1,27 @@
-import { React } from "react";
+import React from "react";
 
 type ContainerProps = {
-  title: string
-  children: React.ReactNode
-}
+  title: string;
+  children: React.ReactNode;
+};
 
 const Container = (props: ContainerProps): JSX.Element => {
   const { title, children } = props;
 
   return (
-    <div style={{ background: 'red'}}>
-      <span>{ title }</span>
-      <div>{ children }</div>
+    <div style={{ background: "red" }}>
+      <span>{title}</span>
+      <div>{children}</div>
     </div>
-  )
-}
+  );
+};
 
 const Parent = (): JSX.Element => {
   return (
     <Container title="Hello">
       <p>テスト</p>
     </Container>
-  )
-}
+  );
+};
 
-export default Parent
+export default Parent;
