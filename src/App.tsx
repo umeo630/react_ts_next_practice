@@ -6,8 +6,6 @@ import Page from './components/ContextSample'
 import Counter from './components/ReducerSample'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
       <ContainerSample></ContainerSample>
