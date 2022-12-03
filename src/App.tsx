@@ -1,5 +1,5 @@
 import './App.css'
-import { Parent } from './components/Parent'
+import { Parent } from './components/CallBackSample'
 
 function App() {
   return (
