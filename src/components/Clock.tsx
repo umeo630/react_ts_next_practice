@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 // タイマーが呼び出される周期を1秒にする
 const UPDATE_CYCLE = 1000
@@ -9,7 +9,6 @@ const KEY_LOCALE = 'KEY_LOCALE';
 enum Locale {
   US = 'en-US',
   JP = 'ja-JP',
-  CH = 'zh-cn',
 }
 
 const getLocaleFromString = (text: string) => {
@@ -18,8 +17,6 @@ const getLocaleFromString = (text: string) => {
       return Locale.US
     case Locale.JP:
       return Locale.JP
-    case Locale.CH:
-      return Locale.CH
     default:
       return Locale.US
   }
@@ -52,7 +49,9 @@ export const Clock = () => {
   }, [])
 
   // localeが変化したときに、localstorageに値を保存するための副作用
-  useEffect(() => {
+  // useLayoutEffect→DOM更新後、画面描画の前に実行される
+  // useEffect→DOM更新後、画面描画後に実行される
+  useLayoutEffect(() => {
     localStorage.setItem(KEY_LOCALE, locale)
     // localeが変化するたびに実行するようにする
   }, [locale])
@@ -70,7 +69,6 @@ export const Clock = () => {
         >
           <option value="en-US">en-US</option>
           <option value="ja-JP">ja-JP</option>
-          <option value="zh-cn">zh-cn</option>
         </select>
       </p>
     </div>
