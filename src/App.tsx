@@ -1,10 +1,10 @@
 import './App.css'
-import { Clock } from './components/Clock'
+import { Parent } from './components/UseContextSample'
 
 function App() {
   return (
     <div className="App">
-      <Clock></Clock>
+      <Parent></Parent>
     </div>
   )
 }
