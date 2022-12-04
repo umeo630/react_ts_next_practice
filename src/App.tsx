@@ -1,10 +1,10 @@
 import './App.css'
-import { Parent } from './components/UseContextSample'
+import { ImageUploader } from './components/useRefSample'
 
 function App() {
   return (
     <div className="App">
-      <Parent></Parent>
+      <ImageUploader></ImageUploader>
     </div>
   )
 }
