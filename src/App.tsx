@@ -1,12 +1,10 @@
 import './App.css'
-import { Parent } from './components/UseImperativeHandleSample'
-import { ImageUploader } from './components/useRefSample'
+import { Input } from './components/UseInput'
 
 function App() {
   return (
     <div className="App">
-      <ImageUploader></ImageUploader>
-      <Parent></Parent>
+      <Input></Input>
     </div>
   )
 }
