@@ -1,10 +1,10 @@
 import './App.css'
-import { Input } from './components/UseInput'
+import { CountButton } from './components/ContainerComponent'
 
 function App() {
   return (
     <div className="App">
-      <Input></Input>
+      <CountButton label='Count' maximum={10}></CountButton>
     </div>
   )
 }
